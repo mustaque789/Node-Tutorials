@@ -9,7 +9,7 @@
 // console.log(app.z)
 
 
-//Create Server and run on browser
+//1. Create Server and run on browser
 // const http= require('http');
 // http.createServer((req,res)=>{
 // res.write("Hello, this is sahil!");
@@ -17,11 +17,24 @@
 // }).listen(4500);
 
 
-//Simple API create ...step 1.Make server, 2.Create api header & n
+//2. Simple API create ...step 1.Make server, 2.Create api header & n
 
-const http=require('http');
-http.createServer((req,resp)=>{
-resp.writeHead(200,{'Content-Type':'application\json'});
-resp.write(JSON.stringify({'name':'sahil', 'age':'30'}));
-resp.end();
-}).listen(4500);
+// const data = require('./data')
+
+// const http=require('http');
+// http.createServer((req,resp)=>{
+// resp.writeHead(200,{'Content-Type':'application\json'});
+// resp.write(JSON.stringify(data));
+// resp.end();
+// }).listen(4500);
+
+
+// 3. Input from command line
+
+const fs= require('fs');
+
+const input= process.argv;              // terminal command logic
+
+fs.writeFileSync(input[2],input[3]);     // adding file from terminal command
+
+fs.unlinkSync(input[3])                   // remove file from terminal command
