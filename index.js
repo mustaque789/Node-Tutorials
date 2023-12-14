@@ -9,7 +9,7 @@
 // console.log(app.z)
 
 
-//1. Create Server and run on browser
+// 1. Create Server and run on browser
 // const http= require('http');
 // http.createServer((req,res)=>{
 // res.write("Hello, this is sahil!");
@@ -17,7 +17,7 @@
 // }).listen(4500);
 
 
-//2. Simple API create ...step 1.Make server, 2.Create api header & n
+// 2 . Simple API create ...step 1.Make server, 2.Create api header & n
 
 // const data = require('./data')
 
@@ -31,10 +31,24 @@
 
 // 3. Input from command line
 
-const fs= require('fs');
+// const fs= require('fs');
 
-const input= process.argv;              // terminal command logic
+// const input= process.argv;              // terminal command logic
 
-fs.writeFileSync(input[2],input[3]);     // adding file from terminal command
+// fs.writeFileSync(input[2],input[3]);     // adding file from terminal command
 
-fs.unlinkSync(input[3])                   // remove file from terminal command
+// fs.unlinkSync(input[3])                   // remove file from terminal command
+
+
+
+// 4. Create files in a folder 
+
+// const fs = require('fs');
+
+// const path = require('path');                   // for getting 'Files' path
+// const dirPath= path.join(__dirname,'files');    // for getting 'Files' path
+// // console.warn(dirPath)
+
+// for(i=0;i<5;i++){
+//     fs.writeFileSync(`${dirPath}/hello${i}.txt`,`multiples files formed together in a folder`)
+// }
