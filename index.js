@@ -135,5 +135,5 @@
 // const dirPath = path.join(__dirname, 'temp')
 
 
-// fs.unlinkSync(`${dirPath}/temp1.txt`)
+// fs.unlinkSync(`${dirPath}/temp1.txt`);
 
