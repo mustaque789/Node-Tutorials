@@ -137,3 +137,10 @@
 
 // fs.unlinkSync(`${dirPath}/temp1.txt`);
 
+
+
+
+// *************************
+
+// Node is fast because it asynchronous - single threaded
+
