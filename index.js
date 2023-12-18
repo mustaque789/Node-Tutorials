@@ -189,4 +189,4 @@
 // })
 
 
-console.log('asynchrnous js')
+console.log('asynchrnous js');
