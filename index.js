@@ -172,18 +172,21 @@
 
 // Handle Asynchronous data in Node Js :- 
 
-let a = 20;
-let b=0;
+// let a = 20;
+// let b=0;
 
-const waitData= new Promise((resolve, reject)=>{
+// const waitData= new Promise((resolve, reject)=>{
 
-    setTimeout(()=>{
-        resolve(30);
-    }, 2000)
+//     setTimeout(()=>{
+//         resolve(30);
+//     }, 2000)
 
-})
+// })
 
-waitData.then((data)=>{
-    b= data;
-  console.log(a+b)
-})
+// waitData.then((data)=>{
+//     b= data;
+//   console.log(a+b)
+// })
+
+
+console.log('asynchrnous js')
