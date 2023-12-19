@@ -13,12 +13,15 @@ const app =express();
 
 app.get('/',(req, res)=>{
     // url : http://localhost:4000/?name=sahil&age=26
-res.send("This is Homepage : "+req.query.age)
+res.send("This is Homepage : "+req.query.age)               // getting data from query parameters
 console.log(req.query.name)
 });
 
 app.get('/about',(req, res)=>{
-res.send("<h1>This is about page</h1>")     // HTML H1 added  through "server response "
+res.send(`
+         <h1>This is about page</h1>
+         <a href="/contact">Go to contact page</a>                       
+            `)     // HTML H1 added  through "server response "   and    added links as well
 })
 
 app.get('/contact',(req, res)=>{
