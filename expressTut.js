@@ -57,4 +57,3 @@ console.log("express server running on port 4000")
 
 // res is used to send data or answer to client
 // res properties : res.send(), res.json(), res.status(), res.setHeader(), res.redirect(), res.render()
-// comments added
