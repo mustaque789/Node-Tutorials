@@ -65,14 +65,33 @@
 // ***********************************
 
 
-// MAKE HTML PAGES
+// MAKE HTML PAGES     + EJS TEMPLATE ENGINE   +  MIDDLEWARE
 
 const express= require('express');
 const app= express();
 const path = require('path')
 const pathFile = path.join(__dirname,'public');
 
-app.set('view engine', 'ejs');
+
+const middleFilter = (req, res, next)=>{                // middleware created : middleware is just a function that manipulates req, res
+    if(!req.query.age){
+     res.send("Enter you age please")
+    }
+ 
+    else if(req.query.age<18){
+     res.send("You are prohibited to access this site")
+    }
+ 
+    else{
+     next();
+    }
+ }
+
+ app.use(middleFilter);                       // middleware used
+ 
+
+
+app.set('view engine', 'ejs');                // ejs engine set
 
 app.get('/',(req,res)=>{
     res.sendFile(`${pathFile}/index.html`)
@@ -104,6 +123,5 @@ app.listen(5000);
 
 
 
-// EJS TEMPLATE ENGINE
 
 
