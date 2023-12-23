@@ -6,6 +6,7 @@
     <title>Profile</title>
 </head>
 <body>                                                 <!-- Dynamic pages -->
+    <%- include('header')  %>                        <!-- Add 1 ejs file into another -->
     <h1>Profile Page</h1>
     <h2>Welcome: <%= user.name %></h2>           
     <h3>Email : <%= user.email %></h3>
