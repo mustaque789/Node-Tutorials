@@ -72,6 +72,8 @@ const app= express();
 const path = require('path')
 const pathFile = path.join(__dirname,'public');
 
+app.set('view engine', 'ejs');
+
 app.get('/',(req,res)=>{
     res.sendFile(`${pathFile}/index.html`)
 })
@@ -80,8 +82,28 @@ app.get('/about',(req,res)=>{
     res.sendFile(`${pathFile}/about.html`)
 })
 
+app.get('/profile',(req,res)=>{ 
+    const user={
+        name:'sahil',
+        email:'sahil@trader.com',
+        city:'los angeles'
+    }                                             // ejs dynamic page : use render() and no need to add path file
+    res.render('profile', {user})
+})
+
 app.get('*',(req,res)=>{
-    res.sendFile(`${pathFile}/notFound.html`)
+    res.sendFile(`${pathFile}/notFound.html`)         // not found page
 })
 
 app.listen(5000);
+
+
+
+
+// ********************************
+
+
+
+// EJS TEMPLATE ENGINE
+
+
