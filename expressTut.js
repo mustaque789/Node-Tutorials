@@ -69,9 +69,19 @@
 
 const express= require('express');
 const app= express();
-const path = express('path')
+const path = require('path')
 const pathFile = path.join(__dirname,'public');
 
 app.get('/',(req,res)=>{
-    res.sendFile()
+    res.sendFile(`${pathFile}/index.html`)
 })
+
+app.get('/about',(req,res)=>{
+    res.sendFile(`${pathFile}/about.html`)
+})
+
+app.get('*',(req,res)=>{
+    res.sendFile(`${pathFile}/notFound.html`)
+})
+
+app.listen(5000);
