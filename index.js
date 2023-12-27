@@ -191,13 +191,34 @@
 
 
 
+
+
+
 // ****************************
 
 
+// Read Data from MongoDB using Promises: 
+
+
+// const dbConnect = require('./mongodb')
+
+// dbConnect().then((resp)=>{
+//    resp.find().toArray().then((data)=>{
+//        console.warn(data)
+//    })
+// })
+// console.warn(dbConnect())
 
 
 
+// Read mongo db using Async-Await : 
 
+const dbConnect = require('./mongodb')
 
+const main = async ()=>{
+   let data = await dbConnect();
+     data = await data.find().toArray();
+     console.warn(data)
+}
 
-
+main();
