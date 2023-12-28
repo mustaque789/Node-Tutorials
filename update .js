@@ -3,12 +3,12 @@ const dbConnect = require('./mongodb')
 const updateData =  async ()=>{
 
     let data = await dbConnect();
-    let result = await data.updateOne(
-        {name :'MI'},
-        {$set : {name:'MI Pro', price: 999}}
+    let result2 = await data.updateOne(
+        {name :'iphone'},
+        {$set : {name:'iphone PRO', price: 999}}
     )
-    console.warn("updated")
+    console.warn(result2)
 }
 
-await updateData()
+updateData()
 
