@@ -7,6 +7,10 @@ const insertFunc = async () =>{
     {name:'motorolla X2', brand:'motorolla', price:500,category:'mobile'},
     {name:'motorolla X3', brand:'motorolla', price:600,category:'mobile'}
   ])
+
+  if(result.acknowledged){
+  console.log("data inserted")
+  }
 }
 
 insertFunc();
