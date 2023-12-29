@@ -24,12 +24,13 @@
 
 // 2 . Simple API create ...step 1.Make server, 2.Create api header & n
 
-// const data = require('./data')
+// // const data = require('./data')
 
 // const http=require('http');
 // http.createServer((req,resp)=>{
 // resp.writeHead(200,{'Content-Type':'application\json'});
-// resp.write(JSON.stringify(data));
+// resp.write(JSON.stringify({name1:'sahil',age:'20'} ));
+// // resp.write(JSON.stringify(data));
 // resp.end();
 // }).listen(4500);
 
@@ -213,12 +214,12 @@
 
 // Read mongo db using Async-Await : 
 
-const dbConnect = require('./mongodb')
+// const dbConnect = require('./mongodb')
 
-const main = async ()=>{
-   let data = await dbConnect();
-     data = await data.find().toArray();
-     console.warn(data)
-}
+// const main = async ()=>{
+//    let data = await dbConnect();
+//      data = await data.find().toArray();
+//      console.warn(data)
+// }
 
-main();
+// main();
