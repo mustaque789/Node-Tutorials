@@ -40,18 +40,39 @@ const dbConnect = require('./mongodb');
 // 3. PUT API method : 
 
 
-app.use(express.json())
+// app.use(express.json())
 
-app.put('/', async (req,res)=>{
+// app.put('/', async (req,res)=>{
 
-    let data = await dbConnect();
-    let result = await data.updateOne(
-        // {name: "peter"},
-        // {$set: {price:1799}}
-        {name: req.body.name},
-        {$set: req.body}
-    )
-    res.send(result)
-})
+//     let data = await dbConnect();
+//     let result = await data.updateOne(
+//         // {name: "peter"},
+//         // {$set: {price:1799}}
+//         {name: req.body.name},
+//         {$set: req.body}
+//     )
+//     res.send(result)
+// })
 
-app.listen(5002);
+// app.listen(5002);
+
+
+
+
+
+//*********************** */
+
+// const mongodb= require('mongodb')
+
+// app.use(express.json())
+
+// app.delete('/:id',async (req,res)=>{
+//     console.log(req.params.id)
+//     let data = await dbConnect();
+//     let result = await data.deleteOne(
+//         {_id:new mongodb.ObjectId(req.params.id)}
+//     )
+// res.send(result)
+// })
+
+// app.listen(5002);
