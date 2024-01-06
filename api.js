@@ -62,17 +62,51 @@ const dbConnect = require('./mongodb');
 
 //*********************** */
 
-// const mongodb= require('mongodb')
+const mongodb= require('mongodb')
 
-// app.use(express.json())
+app.use(express.json())
 
-// app.delete('/:id',async (req,res)=>{
-//     console.log(req.params.id)
-//     let data = await dbConnect();
-//     let result = await data.deleteOne(
-//         {_id:new mongodb.ObjectId(req.params.id)}
-//     )
-// res.send(result)
-// })
+app.delete('/:id',async (req,res)=>{
+    console.log(req.params.id)
+    let data = await dbConnect();
+    let result = await data.deleteOne(
+        {_id:new mongodb.ObjectId(req.params.id)}
+    )
+res.send(result)
+})
 
-// app.listen(5002);
+app.listen(5002);
+
+
+const mongoose = require('mongoose');
+
+mongoose.connect('mongodb://localhost:2702/e-comm')
+
+
+//create schema
+
+const productSchema = mongoose.Schema(
+    {
+        name:String,
+        price:Number
+    }
+)
+
+
+
+// create model : create connection with mongoose via schema
+
+
+const main = ()=>{
+
+
+const Product  = mongoose.model('products',productSchema );
+
+let data = new Product({
+    name:"sahil",
+    price: 999
+})
+
+const result = data.save()
+
+}
