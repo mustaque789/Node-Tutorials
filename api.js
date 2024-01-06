@@ -103,7 +103,7 @@ const main = ()=>{
 const Product  = mongoose.model('products',productSchema );
 
 let data = new Product({
-    name:"sahil",
+    name:"sahil1",
     price: 999
 })
 
