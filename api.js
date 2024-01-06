@@ -110,3 +110,12 @@ let data = new Product({
 const result = data.save()
 
 };
+
+
+
+
+
+
+//
+
+
