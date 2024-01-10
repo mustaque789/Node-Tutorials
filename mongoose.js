@@ -29,3 +29,4 @@ const main = async ()=>{
     const result = await data.save();
     console.log(result)
 }
+main()
