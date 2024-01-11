@@ -3,6 +3,7 @@
 
 
 // schema : validates data type
+//model : 
 
 const mongoose = require('mongoose');
 
