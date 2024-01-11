@@ -3,7 +3,7 @@
 
 
 // schema : validates data type
-//model : 
+//model : makes connection with the mongoose's collection via schema 
 
 const mongoose = require('mongoose');
 
